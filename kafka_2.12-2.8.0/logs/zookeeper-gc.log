@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+
+<verbosegc xmlns="http://www.ibm.com/j9/verbosegc" version="162e6f729_CMPRSS">
+
+<initialized id="1" timestamp="2022-12-26T04:56:32.251">
+  <attribute name="gcPolicy" value="-Xgcpolicy:gencon" />
+  <attribute name="maxHeapSize" value="0x20000000" />
+  <attribute name="initialHeapSize" value="0x20000000" />
+  <attribute name="compressedRefs" value="true" />
+  <attribute name="compressedRefsDisplacement" value="0x0" />
+  <attribute name="compressedRefsShift" value="0x3" />
+  <attribute name="pageSize" value="0x1000" />
+  <attribute name="pageType" value="not used" />
+  <attribute name="requestedPageSize" value="0x1000" />
+  <attribute name="requestedPageType" value="not used" />
+  <attribute name="gcthreads" value="2" />
+  <attribute name="gcthreads Concurrent Mark" value="1" />
+  <attribute name="packetListSplit" value="1" />
+  <attribute name="cacheListSplit" value="1" />
+  <attribute name="splitFreeListSplitAmount" value="1" />
+  <attribute name="numaNodes" value="0" />
+  <system>
+    <attribute name="physicalMemory" value="3999997952" />
+    <attribute name="numCPUs" value="8" />
+    <attribute name="architecture" value="amd64" />
+    <attribute name="os" value="Linux" />
+    <attribute name="osVersion" value="4.15.0-200-generic" />
+  </system>
+  <vmargs>
+    <vmarg name="-Xoptionsfile=/usr/lib/jvm/java-jdk-11.0.11+9/lib/options.default" />
+    <vmarg name="-Xlockword:mode=default,noLockword=java/lang/String,noLockword=java/util/MapEntry,noLockword=java/util/HashMap$Entry,noLockword..." />
+    <vmarg name="-Xjcl:jclse29" />
+    <vmarg name="-Dcom.ibm.oti.vm.bootstrap.library.path=/usr/lib/jvm/java-jdk-11.0.11+9/lib/default:/usr/lib/jvm/java-jdk-11.0.11+9/lib" />
+    <vmarg name="-Dsun.boot.library.path=/usr/lib/jvm/java-jdk-11.0.11+9/lib/default:/usr/lib/jvm/java-jdk-11.0.11+9/lib" />
+    <vmarg name="-Djava.library.path=/usr/lib/jvm/java-jdk-11.0.11+9/lib/default:/usr/lib/jvm/java-jdk-11.0.11+9/lib:/home/theia/dsdriver/lib:/u..." />
+    <vmarg name="-Djava.home=/usr/lib/jvm/java-jdk-11.0.11+9" />
+    <vmarg name="-Duser.dir=/home/project/kafka_2.12-2.8.0" />
+    <vmarg name="-Djava.class.path=/home/theia/dsdriver/tools/clpplus.jar:/home/theia/dsdriver/tools/jline-0.9.93.jar:/home/theia/dsdriver/tools..." />
+    <vmarg name="-Xmx512M" />
+    <vmarg name="-Xms512M" />
+    <vmarg name="-XX:+UseG1GC" />
+    <vmarg name="-XX:MaxGCPauseMillis=20" />
+    <vmarg name="-XX:InitiatingHeapOccupancyPercent=35" />
+    <vmarg name="-XX:+ExplicitGCInvokesConcurrent" />
+    <vmarg name="-XX:MaxInlineLevel=15" />
+    <vmarg name="-Djava.awt.headless=true" />
+    <vmarg name="-Xlog:gc*:file=/home/project/kafka_2.12-2.8.0/bin/../logs/zookeeper-gc.log:time,tags:filecount=10,filesize=100M" />
+    <vmarg name="-Dcom.sun.management.jmxremote" />
+    <vmarg name="-Dcom.sun.management.jmxremote.authenticate=false" />
+    <vmarg name="-Dcom.sun.management.jmxremote.ssl=false" />
+    <vmarg name="-Dkafka.logs.dir=/home/project/kafka_2.12-2.8.0/bin/../logs" />
+    <vmarg name="-Dlog4j.configuration=file:bin/../config/log4j.properties" />
+    <vmarg name="-Djava.class.path=/home/theia/dsdriver/tools/clpplus.jar:/home/theia/dsdriver/tools/jline-0.9.93.jar:/home/theia/dsdriver/tools..." />
+    <vmarg name="-Dsun.java.command=org.apache.zookeeper.server.quorum.QuorumPeerMain config/zookeeper.properties" />
+    <vmarg name="-Dsun.java.launcher=SUN_STANDARD" />
+    <vmarg name="-Dsun.java.launcher.pid=688" />
+  </vmargs>
+</initialized>
+
+<exclusive-start id="2" timestamp="2022-12-26T05:06:22.614" intervalms="590362.357">
+  <response-info timems="0.105" idlems="0.105" threads="0" lastid="0000000000335600" lastname="VM Runtime State Listener" />
+</exclusive-start>
+<sys-start reason="vm idle" id="3" timestamp="2022-12-26T05:06:22.614" intervalms="590362.542" />
+<cycle-start id="4" type="global" contextid="0" timestamp="2022-12-26T05:06:22.614" intervalms="590362.602" />
+<gc-start id="5" type="global" contextid="4" timestamp="2022-12-26T05:06:22.614">
+  <mem-info id="6" free="430686424" total="536870912" percent="80">
+    <mem type="nursery" free="28817304" total="134217728" percent="21">
+      <mem type="allocate" free="28817304" total="67108864" percent="42" />
+      <mem type="survivor" free="0" total="67108864" percent="0" />
+    </mem>
+    <mem type="tenure" free="401869120" total="402653184" percent="99">
+      <mem type="soa" free="381736256" total="382520320" percent="99" />
+      <mem type="loa" free="20132864" total="20132864" percent="100" />
+    </mem>
+    <remembered-set count="10006" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="39003736" >
+  <allocated-bytes non-tlh="5418792" tlh="33584944" />
+  <largest-consumer threadName="main" threadId="0000000000015200" bytes="27344928" />
+</allocation-stats>
+<gc-op id="7" type="mark" timems="12.096" contextid="4" timestamp="2022-12-26T05:06:22.626">
+  <trace-info objectcount="81205" scancount="65738" scanbytes="2163196" />
+  <finalization candidates="114" enqueued="0" />
+  <ownableSynchronizers candidates="29" cleared="0" />
+  <references type="soft" candidates="3205" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="3784" cleared="1436" enqueued="1179" />
+  <references type="phantom" candidates="362" cleared="23" enqueued="23" />
+  <stringconstants candidates="6848" cleared="3"  />
+  <object-monitors candidates="6" cleared="0"  />
+</gc-op>
+<gc-op id="8" type="classunload" timems="0.018" contextid="4" timestamp="2022-12-26T05:06:22.626">
+  <classunload-info classloadercandidates="12" classloadersunloaded="0" classesunloaded="0" anonymousclassesunloaded="0" quiescems="0.000" setupms="0.015" scanms="0.002" postms="0.001" />
+</gc-op>
+<gc-op id="9" type="sweep" timems="2.482" contextid="4" timestamp="2022-12-26T05:06:22.629" />
+<gc-end id="10" type="global" contextid="4" durationms="14.978" usertimems="25.104" systemtimems="2.408" stalltimems="2.267" timestamp="2022-12-26T05:06:22.629" activeThreads="2">
+  <mem-info id="11" free="460914264" total="536870912" percent="85">
+    <mem type="nursery" free="59045144" total="134217728" percent="43">
+      <mem type="allocate" free="59045144" total="67108864" percent="87" />
+      <mem type="survivor" free="0" total="67108864" percent="0" />
+    </mem>
+    <mem type="tenure" free="401869120" total="402653184" percent="99" micro-fragmented="4608" macro-fragmented="0">
+      <mem type="soa" free="381736256" total="382520320" percent="99" />
+      <mem type="loa" free="20132864" total="20132864" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1202" classloader="0" />
+    <remembered-set count="9923" />
+  </mem-info>
+</gc-end>
+<cycle-end id="12" type="global" contextid="4" timestamp="2022-12-26T05:06:22.629" />
+<sys-end id="13" timestamp="2022-12-26T05:06:22.629" />
+<exclusive-end id="14" timestamp="2022-12-26T05:06:22.629" durationms="15.903" />
+
+<heap-resize id="15" type="release free pages" space="tenure" amount="401862656" count="1" timems="0.203" reason="idle" timestamp="2022-12-26T05:06:22.630" />
